@@ -1,0 +1,63 @@
+.navbar{
+    height:70px;
+    background:#181818;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+}
+
+
+.logo{
+    color:#1DB954;
+    font-size:25px;
+    font-weight:bold;
+}
+
+
+.menu-box{
+    position:relative;
+}
+
+
+.dots{
+
+    background:none;
+    border:none;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+
+}
+
+
+.dropdown-menu{
+
+    position:absolute;
+    right:0;
+    top:50px;
+
+    width:170px;
+
+    background:#242424;
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+
+.dropdown-menu div{
+
+    color:white;
+    padding:15px;
+    cursor:pointer;
+
+}
+
+
+.dropdown-menu div:hover{
+
+    background:#1DB954;
+
+}

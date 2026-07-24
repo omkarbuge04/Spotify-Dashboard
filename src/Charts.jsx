@@ -9,9 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-
 import { Bar, Doughnut } from "react-chartjs-2";
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -21,12 +19,10 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-
 function Charts({ artistData, tracks }) {
   if (!artistData || !tracks || tracks.length === 0) {
     return null;
   }
-
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -78,7 +74,6 @@ function Charts({ artistData, tracks }) {
       },
     ],
   };
-
   const barData = {
     labels: tracks.slice(0, 5).map((track) => track.name),
     datasets: [
@@ -98,15 +93,12 @@ function Charts({ artistData, tracks }) {
       },
     ],
   };
-
   return (
     <div className="charts">
-
       <div className="chart-card">
         <h2 style={{ color: "#fff", textAlign: "center" }}>
           Artist Statistics
         </h2>
-
         <div
           style={{
             background: "#fff",
@@ -118,12 +110,10 @@ function Charts({ artistData, tracks }) {
           <Doughnut data={doughnutData} />
         </div>
       </div>
-
       <div className="chart-card">
         <h2 style={{ color: "#fff", textAlign: "center" }}>
           Top 5 Tracks
         </h2>
-
         <div
           style={{
             background: "#fff",
@@ -135,9 +125,7 @@ function Charts({ artistData, tracks }) {
           <Bar data={barData} options={options} />
         </div>
       </div>
-
     </div>
   );
 }
-
 export default Charts;
